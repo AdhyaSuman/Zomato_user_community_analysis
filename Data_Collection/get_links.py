@@ -78,7 +78,7 @@ for mylink in go_to_links:
 
 
 #writing to output file
-with open('restaurant_links_kolkata_1.txt', "w") as f:
+with open('restaurant_links_kolkata.txt', "w") as f:
 	for ul in rest_links:
 		f.write(ul+'\n')
 
