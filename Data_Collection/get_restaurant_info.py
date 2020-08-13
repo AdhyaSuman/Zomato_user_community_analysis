@@ -32,11 +32,11 @@ def extract_link(url):
 
 	return soup
 
-spamWriter = csv.writer(open('trial.csv', 'a'))
+spamWriter = csv.writer(open('restaurant_info.csv', 'a'))
 spamWriter.writerow(['Link','Name','Restaurant ID','Rating','No. of Votes','Address','Cuisine','Cost for Two'])
 
 ctr = 0
-with open('trial.txt', "r") as myfile:
+with open('restaurant_links_kolkata.txt', "r") as myfile:
 	for link in myfile.readlines():
 		link = link.strip()
 		print(link)
@@ -102,6 +102,6 @@ with open('trial.txt', "r") as myfile:
 		print(ctr)
 		
 		#Write to csv file
-		spamWriter = csv.writer(open('trial.csv', 'a'))
+		spamWriter = csv.writer(open('restaurant_info.csv', 'a'))
 		spamWriter.writerow([l,name,rest_id,rating,voting,address,cuisine,cost_for_two])
 
